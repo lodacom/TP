@@ -12,6 +12,7 @@ public class Facile extends AbstractFactory
 {
 	AlphabetSymbole alphaCode;
 	AlphabetLettre alpha;
+	//AbstractAlphabet abstr;
 	
 	public Facile(AlphabetSymbole p_alphaCode,AlphabetLettre p_alpha)
 	{
@@ -25,6 +26,9 @@ public class Facile extends AbstractFactory
 	public AbstractAlphabet CreateAlphabet() 
 	{
 		// TODO Auto-generated method stub
+		/*Que faut-il mettre?
+		 * abstr=?
+		 */
 		return null;
 	}
 
@@ -32,6 +36,7 @@ public class Facile extends AbstractFactory
 	public AbstractGestPhraseMystere CreateGPM() 
 	{
 		// TODO Auto-generated method
+		//idem que faut-il mettre?
 		return null;
 	}
 	
