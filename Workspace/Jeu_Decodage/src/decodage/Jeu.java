@@ -1,5 +1,7 @@
 package decodage;
 
+import java.util.Scanner;
+
 public class Jeu 
 {
 	public AlphabetSymbole alphaCode;
@@ -18,8 +20,19 @@ public class Jeu
 	
 	public void truc()
 	{
+		Scanner sc=new Scanner(System.in);
 		this.niveau=new Facile(this.alphaCode,this.alpha);
 		System.out.println("Ma phrase mystere: "+this.niveau.encode(phrase_mystere));
+		System.out.println("Saisissez une association lettre-symbole");
+		String lettre=sc.nextLine();
+		String symbole=sc.nextLine();
+		while (1 < 2)
+		{
+			
+			System.out.println("Saisissez une association lettre-symbole");
+			lettre=sc.nextLine();
+			symbole=sc.nextLine();
+		}
 	}
 	
 	public static void main(String[] args) 

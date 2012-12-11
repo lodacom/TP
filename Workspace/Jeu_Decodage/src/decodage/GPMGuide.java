@@ -13,22 +13,31 @@ public class GPMGuide extends AbstractGestPhraseMystere
 		this.symbolesUtilisateur=new String [26];
 	}
 	
-	public String Suite_Mot_Decodage() 
+	public String Suite_Mot_Decodage(String p_phrase) 
 	{
 		// TODO Auto-generated method stub
-		return null;
+		String phrase_courante="";
+		for (int i=0;i<p_phrase.length();i++)
+		{
+			String charac=p_phrase.substring(i, i+1);//compris entre a et z
+			int index=alpha.getIndexLettre(charac);
+			String symb=this.symbolesUtilisateur[index];
+			phrase_courante+=symb;
+		}
+		return phrase_courante;
 	}
 
-	public void Association_Lettre_Symbole() 
+	public void Association_Lettre_Symbole(String p_lettre,String p_symbole) 
 	{
 		// TODO Auto-generated method stub
-		
+		int index=alpha.getIndexLettre(p_lettre);
+		this.symbolesUtilisateur[index]=p_symbole;
 	}
 	
 	/**
 	 * @param lettre
 	 * @param symbole
-	 * @return vrai s'il y a une bonne association sinon retourn faux
+	 * @return vrai s'il y a une bonne association sinon retourne faux.
 	 */
 	public boolean Bonne_Association(String lettre,String symbole)
 	{
